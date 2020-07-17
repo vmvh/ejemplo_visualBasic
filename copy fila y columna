@@ -1,0 +1,15 @@
+Sub copy_fila_columna()
+
+f_i = 5
+f_f = 2000
+c_i = 1
+c_f = 7
+
+For fila = f_i To f_f
+    For columna = c_i To c_f
+        If Sheets("balanza").Cells(fila, "A") <> "" Then
+            Sheets("copy").Cells(fila, columna) = Sheets("balanza").Cells(fila, columna)
+        End If
+    Next columna
+Next fila
+End Sub
